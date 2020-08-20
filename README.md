@@ -8,27 +8,47 @@ The data used in this project can be found on [Kaggle](https://www.kaggle.com/ma
 
 ## Installation and usage
 
-You can use the repo by creating a python virtual environment.
+1. Create a python virtual environment.
 
-```bash
-$python -m venv venv
-```
+    ```bash
+    $python -m venv venv
+    ```
 
-Install the dependencies.
+2. Install the dependencies.
 
-```bash
-$pip install -r requirements.txt
-```
+    ```bash
+    $pip install -r requirements.txt
+    ```
 
-You can then use the application.
+3. Run the notebook to reproduce the `cleaned_data.csv` and `jobs_vectors.npy` and move them under `assets/` directory so that the `JobMatcher/` dir would be as follows.
 
-```bash
-$./run
-```
+    ```raw
+    .
+    ├── api.py
+    ├── assets
+    │   ├── cleaned_data.csv
+    │   └── jobs_vectors.npy
+    ├── __init__.py
+    └── nlp.py
+    ```
+
+4. Run the application.
+
+    ```bash
+    $./run
+    ```
+
+5. send your query request to the url
+
+    `http://127.0.0.1:8000/jobs/?query=YOUR-QUERY_GOES-HERE`
+
+    for example you can search for a designer job as follows
+
+    `http://127.0.0.1:8000/jobs/?query=fashon%20designer`
 
 ## Notebook
 
-The experiment notebook is available under [notebooks/](notebooks/) dir.
+The experiment notebook is available under [notebooks/](notebooks/) dir, you may use it to regenerate the vectors.
 
 ## example
 
